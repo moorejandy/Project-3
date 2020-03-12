@@ -3,28 +3,30 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 // Using the Schema constructor, create a new UserSchema object
 // This is similar to a Sequelize model
-var UsersSchema = new Schema({
-
-  userName: {
+var RecipesSchema = new Schema({
+  
+  label: {
     type: String,
     required: true
   },
-  email: {
+  image: {
     type: String,
     required: true
   },
-  password: {
+  yield: {
     type: String,
     required: true
   },
-
-  recipe: [{
+  ingredients: {
+      type: [],
+      required: true
+  },
+  note: [{
     type: Schema.Types.ObjectId,
-    ref: "Recipes"
-  }
-]
+    ref: "Note"
+  }]
 });
 // This creates our model from the above schema, using mongoose's model method
-var Users = mongoose.model("Users", UsersSchema);
-// Export the Users model
-module.exports = Users;
+var Recipes = mongoose.model("Recipes", RecipesSchema);
+// Export the Article model
+module.exports = Recipes;
