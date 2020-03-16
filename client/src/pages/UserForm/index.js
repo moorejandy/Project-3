@@ -8,50 +8,69 @@ import API from "../../utils/API";
 // import { Link } from "react-router-dom";
 // import { Col, Row, Container } from "../components/Grid";
 // import { List, ListItem } from "../components/List";
-// import { Input, TextArea, FormBtn } from "../components/Form";
+// import { Input} from "../../components/Form";
     
 class UserForm extends Component {
   state = {
     userName: "",
-    password: ""
+    password: "",
+    email: ""
+
   };
+
+  componentDidMount() {
+
+  }
 
 
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
-      [name]: value
+      [name]: value,
     });
   };
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.userName && this.state.password) {
+    if (this.state.userName && this.state.password && this.state.email) {
       API.saveUser({
         userName: this.state.userName,
-        pas: this.state.password,
+        password: this.state.password,
+        email: this.state.email
       })
-        // .then(res => this.loadBooks())
-        .catch(err => console.log(err));
+        .then(res => this.redirect("./user"))
+        .catch(err => console.log(err.response));
     }
+    this.props.history.push('/user');
   };
 // function UserForm(){
   render(){
       return (
         <form>
-        {/* <span className="formtext">&#x3C;Form /&#x3E;</span> */}
           <input 
-            type="text" 
+            name="userName"
+            value={this.state.userName} 
+            onChange={this.handleInputChange}
             placeholder="Enter a user name" 
             required 
           />
            <input 
-            type="text" 
+            name="password"
+            value={this.state.password} 
+            onChange={this.handleInputChange}
             placeholder="Enter a password" 
             required 
           />
-          <button  disabled={(this.state.userName && this.state.password)}
-                onClick={this.handleFormSubmit}
+          <input 
+            name="email"
+            value={this.state.email} 
+            onChange={this.handleInputChange}
+            placeholder="Enter email" 
+            required 
+          />
+
+<button  disabled={!(this.state.userName && this.state.password && this.state.email)}
+                onClick={this.handleFormSubmit} 
                   >Sign Up</button>
         </form>
       );
