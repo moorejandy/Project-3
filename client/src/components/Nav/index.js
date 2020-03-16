@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 function Nav() {
   return (
@@ -6,7 +7,7 @@ function Nav() {
       <a className="navbar-brand" href="/">
         Recipe App
       </a>
-      <button type="button" class="btn btn-success">Sign up</button>
+      <Link to="/form"><button type="button" class="btn btn-sucess">Sign Up</button></Link>
     </nav>
   );
 }
