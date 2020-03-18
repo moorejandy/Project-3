@@ -16,5 +16,18 @@ export default {
   // Saves a book to the database
   saveUser: function(userData) {
     return axios.post("/api/users", userData);
+  },
+
+  // Gets the book with the given id
+  getRecipes: function(q) {
+    return axios.get("http://localhost:3001/api/recipes", { params: { q: q } });
+  },
+  // Deletes the book with the given id
+  deleteRecipes: function(id) {
+    return axios.delete("/api/recipes/" + id);
+  },
+  // Saves a book to the database
+  saveRecipes: function(userData) {
+    return axios.post("/api/recipes", userData);
   }
 };
