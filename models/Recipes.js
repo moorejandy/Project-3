@@ -15,7 +15,7 @@ var RecipesSchema = new Schema({
   },
   yield: {
     type: String,
-    required: true
+    required: false
   },
   ingredients: {
       type: [],
