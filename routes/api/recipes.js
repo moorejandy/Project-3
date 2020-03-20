@@ -3,9 +3,13 @@ const recipesController = require("../../controllers/recipeAPIController");
 
 // this matches the route for /api/recipes
 router
-  .get("/",(req, res)=> {
-      recipesController.findAll(req, res);
-  })
+//   .get("/",(req, res)=> {
+//       recipesController.findAll(req, res);
+    .route("/")
+    .get((req, res)=> {
+        recipesController.findAll(req, res);
+    });
+//   })
 //   .then(res => {
 //       console.log(res);
 //   })

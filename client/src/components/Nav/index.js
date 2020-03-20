@@ -7,7 +7,7 @@ function Nav() {
       <a className="navbar-brand" href="/">
         Recipe App
       </a>
-      <Link to="/form"><button type="button" class="btn btn-sucess">Sign Up</button></Link>
+      <Link to="/form"><button type="button" className="btn btn-sucess">Sign Up</button></Link>
     </nav>
   );
 }

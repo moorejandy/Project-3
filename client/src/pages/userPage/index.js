@@ -2,15 +2,22 @@ import React, { Component } from "react";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import API from "../../utils/API";
 import Nav from "../../components/Nav";
+import Recipe from "../../components/Recipe";
+// const axios = require("axios");
 
-class userPage extends Component {
+class UserPage extends Component {
   state = {
     recipes: [],
     q: ""
   };
 
   componentDidMount() {
-
+    // axios
+    // .get("https://api.edamam.com/search?q=" + q + "&app_id=299349fb&app_key=1271d24b2a30960d770f228fa7a35422"
+    // ).then(res => {
+    //   const recipes =res.data.hits;
+    //   this.setState({recipes})
+    // })
   }
 
   handleInputChange = event => {
@@ -20,24 +27,33 @@ class userPage extends Component {
     });
   };
 
-  handleFormSubmit = () => {
-      API.getRecipes(this.state.q)
-      .then(res => 
-    this.setState({
-      recipes: res.data
-    })
-      )
-        .catch(()=>
+  getRecipes = () => {
+    console.log("clicked the button");
+    API.getRecipes(this.state.q)
+      .then(results => {
+        // console.log("We got a response!" + results);
+        console.log(results.data);
         this.setState({
-          recipes: [],
+          recipes: results.data[0].hits
         })
-        );
-    // this.props.history.push('/user');
+      });
+  }
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    this.getRecipes();
   };
-// function userPage({label, image, yield, ingriedents}) {
-  render(){
-      return (
-        <div>
+  
+    // this.props.history.push('/user');
+  
+  render() {
+    // console.log(`recipes: ${JSON.stringify(this.state.recipes[0])}`)
+    // const {recipes} = this.state;
+    if (this.state.recipes === null){
+      return 
+    }else{
+    return (
+      <div>
         <Nav />
         <input
           id="search"
@@ -48,20 +64,24 @@ class userPage extends Component {
           onChange={this.handleInputChange}
           required
         />
-          <button
+        <button
           onClick={this.handleFormSubmit}
           type="submit"
           className="btn btn-lg btn-danger float-right"
         >
           Search
         </button>
-<h3>{this.state.recipes}</h3>
-{/* <h3>{this.state.recipes[0].image}</h3> */}
-{/* <h3>{yield}</h3> */}
-{/* <h3>{this.state.recipes[0].ingredient}</h3> */}
+       {/* {this.state.recipes.map(recipe => (
+          <Recipe key={recipe.uri}
+            label={recipe.label} 
+            uri={recipe.uri} 
+          />
+        ))} */}
+        <Recipe recipes={this.state.recipes}/>
       </div>
-      );
-    }
+    );
+      }
+  }
 }
-  
-  export default userPage;
+
+export default UserPage;
