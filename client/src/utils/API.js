@@ -20,7 +20,8 @@ export default {
 
   // Gets the book with the given id
   getRecipes: function(q) {
-    return axios.get("http://localhost:3001/api/recipes", { params: { q: q } });
+    console.log("get recipes");
+    return axios.get("/api/recipes", { params: { q: q } });
   },
   // Deletes the book with the given id
   deleteRecipes: function(id) {

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import UserForm from "./pages/UserForm";
 import HomePage from "./pages/HomePage";
-import userPage from "./pages/userPage";
+import UserPage from "./pages/UserPage";
 
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/form" component={UserForm} />
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/user" component={userPage} />
+          <Route exact path="/user" component={UserPage} />
           {/* <Route exact path="/user/:id" component={Detail} />  */}
           </Switch>
     </Router>
