@@ -1,24 +1,22 @@
 import React, { Component } from "react";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+// import API from "../../utils/API";
 import API from "../../utils/API";
 import {Nav3} from "../../components/Nav";
 import Recipe from "../../components/Recipe";
 import Footer from "../../components/Footer";
-// const axios = require("axios");
+const axios = require("axios");
+
 
 class UserPage extends Component {
   state = {
     recipes: [],
-    q: ""
+    q: "",
   };
 
   componentDidMount() {
-    // axios
-    // .get("https://api.edamam.com/search?q=" + q + "&app_id=299349fb&app_key=1271d24b2a30960d770f228fa7a35422"
-    // ).then(res => {
-    //   const recipes =res.data.hits;
-    //   this.setState({recipes})
-    // })
+
   }
 
   handleInputChange = event => {
@@ -29,30 +27,50 @@ class UserPage extends Component {
   };
 
   getRecipes = () => {
-    console.log("clicked the button");
-    API.getRecipes(this.state.q)
+    // console.log("clicked the button");
+    axios
+      .get("https://api.edamam.com/search?q=" + this.state.q + "&app_id=299349fb&app_key=1271d24b2a30960d770f228fa7a35422")
+      // .then(results => console.log(results))
       .then(results => {
-        // console.log("We got a response!" + results);
-        console.log(results.data);
+        results.data.hits.forEach(element => {
+          console.log(element.recipe.label);
+        });
+        // console.log(results.data.hits);
+        JSON.stringify([results.data.hits]);
         this.setState({
-          recipes: results.data[0].hits
+          recipes: results.data.hits
         })
+        console.log("These: "+ this.state.recipes);
       });
   }
+
+  //   getRecipes2 = () =>{
+  //     axios 
+  //     .get("https://api.edamam.com/search?q=chicken&app_id=299349fb&app_key=1271d24b2a30960d770f228fa7a35422")
+
+  //     .then(response =>
+  //       response.results.data[0].hits.map(recipe => ({
+  // recipe: `${recipe.label} ${recipe.image}`
+  //       }))
+  //       )
+  //       .then(recipes => {
+  //         this.setState({
+  //           recipes,
+  //           isLoading: false
+  //         });
+  //       }).catch(error => this.setState({ error, isLoading: false}))
+  //   }
 
   handleFormSubmit = event => {
     event.preventDefault();
     this.getRecipes();
   };
-  
-    // this.props.history.push('/user');
-  
+
+
   render() {
-    // console.log(`recipes: ${JSON.stringify(this.state.recipes[0])}`)
-    // const {recipes} = this.state;
-    if (this.state.recipes === null){
-      return 
-    }else{
+
+    const { recipes } = this.state;
+
     return (
       <div>
         <Nav3 />
@@ -72,21 +90,18 @@ class UserPage extends Component {
         >
           Search
         </button>
-       {/* {this.state.recipes.map(recipe => (
-          <Recipe key={recipe.uri}
-            label={recipe.label} 
-            uri={recipe.uri} 
-          />
-        ))} */}
-        <Recipe recipes={this.state.recipes}/>
+
+        <Recipe recipes={recipes} />
+
         <div class="foot fixed-bottom">
           <Footer>
           </Footer>
         </div>
       </div>
     );
-      }
   }
 }
+
+
 
 export default UserPage;

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export function Nav1() {
+
   return (
     <nav class="navbar border bg-light border-success">
       <a class="navbar-brand" href="/">Thrive</a>
