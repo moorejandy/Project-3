@@ -1,14 +1,10 @@
 const router = require("express").Router();
-const recipesController = require("../../controllers/recipeAPIController");
+const recipesController = require("../../controllers/recipesController");
 
 // this matches the route for /api/recipes
-router
-//   .get("/",(req, res)=> {
-//       recipesController.findAll(req, res);
-    .route("/")
-    .get((req, res)=> {
-        recipesController.findAll(req, res);
-    });
+router.route("/")
+.get(recipesController.findAll)
+.post(recipesController.create);
 //   })
 //   .then(res => {
 //       console.log(res);

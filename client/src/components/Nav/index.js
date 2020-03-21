@@ -8,6 +8,9 @@ export function Nav1() {
       <a class="navbar-brand" href="/">Thrive</a>
 
       <form class="form-inline my-2 my-lg-10">
+      <Link className="nav-signup" to="/login">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">LOGIN</button>
+        </Link>
         <Link className="nav-signup" to="/form">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">SIGNUP</button>
         </Link>

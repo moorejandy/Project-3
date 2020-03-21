@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import UserForm from "./pages/UserForm";
 import HomePage from "./pages/HomePage";
-import UserPage from "./pages/userPage";
+import UserPage from "./pages/UserPage";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SavedRecipePage from "./pages/SavedRecipePage";
 
 
 class App extends Component {
@@ -17,7 +18,7 @@ class App extends Component {
           <Route exact path="/form" component={UserForm} />
           <Route exact path="/" component={HomePage} />
           <Route exact path="/user" component={UserPage} />
-          {/* <Route exact path="/user/:id" component={Detail} />  */}
+          <Route exact path="/user/:id" component={SavedRecipePage} /> 
           </Switch>
     </Router>
     </div>
