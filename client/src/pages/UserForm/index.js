@@ -5,11 +5,14 @@ import React, { Component } from "react";
 // import DeleteBtn from "../components/DeleteBtn";
 // import Jumbotron from "../components/Jumbotron";
 import API from "../../utils/API";
+import { Nav2 } from "../../components/Nav";
+import { Container, Col, Row } from "../../components/Grid";
+import Footer from "../../components/Footer";
 // import { Link } from "react-router-dom";
 // import { Col, Row, Container } from "../components/Grid";
 // import { List, ListItem } from "../components/List";
 // import { Input} from "../../components/Form";
-    
+
 class UserForm extends Component {
   state = {
     userName: "",
@@ -43,40 +46,93 @@ class UserForm extends Component {
     }
     this.props.history.push('/user');
   };
-// function UserForm(){
-  render(){
-      return (
-        <form>
-          <input 
-            name="userName"
-            value={this.state.userName} 
-            onChange={this.handleInputChange}
-            placeholder="Enter a user name" 
-            required 
-          />
-           <input 
-            name="password"
-            value={this.state.password} 
-            onChange={this.handleInputChange}
-            placeholder="Enter a password" 
-            required 
-          />
-          <input 
-            name="email"
-            value={this.state.email} 
-            onChange={this.handleInputChange}
-            placeholder="Enter email" 
-            required 
-          />
+  // function UserForm(){
+  render() {
+    return (
+      <div>
+        <Nav2 />
+        <Container>
+          <Row>
+            <Col size="md-6 s4">
+              <h1 class="display-1">Information</h1>
+            </Col>
+            <Col size="md-4 s5">
+              <h1 class="display-1">SignUp Form </h1>
+              {/* <form>
+                <input
+                  name="userName"
+                  value={this.state.userName}
+                  onChange={this.handleInputChange}
+                  placeholder="Enter a user name"
+                  required
+                /> <br /><br />
+                <input
+                  name="password"
+                  value={this.state.password}
+                  onChange={this.handleInputChange}
+                  placeholder="Enter a password"
+                  required
+                /><br /><br />
+                <input
+                  name="email"
+                  value={this.state.email}
+                  onChange={this.handleInputChange}
+                  placeholder="Enter email"
+                  required
+                /><br /><br />
 
-<button  disabled={!(this.state.userName && this.state.password && this.state.email)}
-                onClick={this.handleFormSubmit} 
-                  >Sign Up</button>
-        </form>
-      );
-    }
+                <button class="btn btn-primary" disabled={!(this.state.userName && this.state.password && this.state.email)}
+                  onClick={this.handleFormSubmit}
+                >Sign Up</button>
+              </form> */}
+
+
+              <form>
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Example label</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input"
+                    name="userName"
+                    value={this.state.userName}
+                    onChange={this.handleInputChange}
+                    placeholder="Enter a user name"
+                    required></input>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                    name="password"
+                    value={this.state.password}
+                    onChange={this.handleInputChange}
+                    placeholder="Enter a password"
+                    required></input>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+                    name="email"
+                    value={this.state.email}
+                    onChange={this.handleInputChange}
+                    placeholder="Enter email"
+                    required></input>
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <button class="btn btn-primary" disabled={!(this.state.userName && this.state.password && this.state.email)}
+                  onClick={this.handleFormSubmit}
+                >Sign Up</button>
+              </form>
+            </Col>
+          </Row>
+        </Container>
+        <div class="foot fixed-bottom">
+          <Footer>
+          </Footer>
+        </div>
+      </div>
+
+    );
   }
+}
 
 
-    
+
 export default UserForm;
