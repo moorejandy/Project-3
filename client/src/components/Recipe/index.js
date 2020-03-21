@@ -1,19 +1,19 @@
 import React from "react";
 
-function Recipe({recipes}) {
+function Recipe({ recipes }) {
+  console.log("recipe component: " + JSON.stringify(recipes[0]));
   return (
-<ul>
+    <ul>
 
-  {recipes.map(recipe => (
-   
-    <li key={recipe.uri}> {recipe.uri} {recipe.label} {recipe.image} {recipe.ingredientLines}</li>
-        // {/* <h3>{recipe.label}</h3>
-        // <h3>{recipe.image}</h3>
-        // <h3>{recipe.ingredientLines}</h3>
-        // <h3>{recipe.uri}</h3> */}
-  )) }
-  </ul>
- );
+      {recipes.map(recipe => (
+
+        <li key={recipe.recipe.uri}> {recipe.recipe.uri} 
+        {recipe.recipe.label} 
+        {recipe.recipe.image} 
+        {recipe.recipe.ingredientLines}</li>
+      ))}
+    </ul>
+  );
 }
 
 export default Recipe;
