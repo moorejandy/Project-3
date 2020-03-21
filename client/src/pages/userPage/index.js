@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 // import API from "../../utils/API";
-import Nav from "../../components/Nav";
+import API from "../../utils/API";
+import {Nav3} from "../../components/Nav";
 import Recipe from "../../components/Recipe";
-import axios from "axios";
+import Footer from "../../components/Footer";
+const axios = require("axios");
+
 
 class UserPage extends Component {
   state = {
@@ -69,7 +73,7 @@ class UserPage extends Component {
 
     return (
       <div>
-        <Nav />
+        <Nav3 />
         <input
           id="search"
           type="text"
@@ -86,7 +90,13 @@ class UserPage extends Component {
         >
           Search
         </button>
+
         <Recipe recipes={recipes} />
+
+        <div class="foot fixed-bottom">
+          <Footer>
+          </Footer>
+        </div>
       </div>
     );
   }
