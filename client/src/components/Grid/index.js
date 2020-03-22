@@ -9,7 +9,7 @@ export function Container({children }) {
 
 // This Row component lets us use a bootstrap row without having to think about class names
 export function Row({children }) {
-  return <div className="row">{children}</div>;
+  return <div className="row border border-danger">{children}</div>;
 }
 
 // This Col component lets us size bootstrap columns with less syntax

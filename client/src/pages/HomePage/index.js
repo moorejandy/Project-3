@@ -11,35 +11,41 @@ function HomePage() {
   return (
     <div>
       <div class="wrapper">
-      <Nav1 />
-      <Container>
-        <Jumbotron>
-          <h1 class="display-1">Hello, world!</h1>
-          <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-          <hr class="my-10"></hr>
-          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-          <a class="btn btn-primary btn-lg" href="/" role="button">Learn more</a>
-        </Jumbotron>
-      </Container>
-      <Container>
-        <Row>
-          <Col size="md-3 s1">
-            <h1 class="display-1">Video</h1>
-          </Col>
-          <Col size="md-4 s2">
-            <h1 class="display-1">Recipe</h1>
-          </Col>
-          <Col size="md-3 s3">
-            <h1 class="display-1">What's Trending</h1>
-          </Col>
-        </Row>
-      </Container>
+        <Nav1 />
+        <div class="slideArea">
+          <Container>
+            <Jumbotron>
+              <img class="mySlides" src="https://pairwise.com/wp-content/uploads/2018/10/bowls.jpg" ></img>
+              <hr class="my-10"></hr>
+              <h4>Recipes for happy and healthy life <i class="fas fa-utensils"></i></h4>
+              <a class="btn btn-success btn-lg btn-lm" href="/signup" role="button">Learn more</a>
+            </Jumbotron>
+          </Container>
+        </div>
+        <Container>
+          <Row>
+            <Col size="md-4 s1">
+              <h3 class="display-6">Video of the day</h3> <hr/>
+              <video width="100%" height="100%" controls>
+                <source src="movie.mp4" type="video/mp4"></source>
+                <source src="movie.ogg" type="video/ogg"></source>
+              </video>
+            </Col>
+            <Col size="md-4 s2">
+              <h3 class="display-6">Recipe</h3> <hr/>
+              <video width="100%" height="100%" controls>
+                <source src="movie.mp4" type="video/mp4"></source>
+                <source src="movie.ogg" type="video/ogg"></source>
+              </video>
+            </Col>
+          </Row>
+        </Container>
       </div>
       <div class="foot fixed-bottom">
         <Footer>
         </Footer>
       </div>
-      </div>
+    </div>
   );
 }
 

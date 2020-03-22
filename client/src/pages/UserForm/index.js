@@ -41,10 +41,10 @@ class UserForm extends Component {
         password: this.state.password,
         email: this.state.email
       })
-        .then(res => this.redirect("./user"))
+        .then(res => this.redirect("./login"))
         .catch(err => console.log(err.response));
     }
-    this.props.history.push('/user');
+    this.props.history.push('/login');
   };
   // function UserForm(){
   render() {
@@ -58,33 +58,7 @@ class UserForm extends Component {
             </Col>
             <Col size="md-4 s5">
               <h1 class="display-1">SignUp Form </h1>
-              {/* <form>
-                <input
-                  name="userName"
-                  value={this.state.userName}
-                  onChange={this.handleInputChange}
-                  placeholder="Enter a user name"
-                  required
-                /> <br /><br />
-                <input
-                  name="password"
-                  value={this.state.password}
-                  onChange={this.handleInputChange}
-                  placeholder="Enter a password"
-                  required
-                /><br /><br />
-                <input
-                  name="email"
-                  value={this.state.email}
-                  onChange={this.handleInputChange}
-                  placeholder="Enter email"
-                  required
-                /><br /><br />
-
-                <button class="btn btn-primary" disabled={!(this.state.userName && this.state.password && this.state.email)}
-                  onClick={this.handleFormSubmit}
-                >Sign Up</button>
-              </form> */}
+              
 
 
               <form>
@@ -94,8 +68,8 @@ class UserForm extends Component {
                     name="userName"
                     value={this.state.userName}
                     onChange={this.handleInputChange}
-                    placeholder="Enter a user name"
-                    required></input>
+                   // placeholder="Enter user name"
+                    required></input>   
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Password</label>
