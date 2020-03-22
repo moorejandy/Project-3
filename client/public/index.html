@@ -11,30 +11,27 @@
     -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/materia/bootstrap.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+  integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/materia/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <title>Thrive</title>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-  <title>React App</title>
+  
 </head>
 
 <body>
-
+  
 
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
-  <div id="root"></div>
+  <div id="root">
+   
+     </div>
   <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -45,47 +42,190 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-
+   
 </body>
 
 <style>
+
+   body {
+    background-image: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701575077.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    }
+
   .navbar-brand {
-    font-weight: bold;
-    font-size: 40px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: green;
+    height: 4rem;
+    width: 30px;
   }
 
+  .fixed-top{
+    background-image: linear-gradient(white, white);
+    opacity: 0.95;
+  }
+
+  .appLogo{
+    height: 100%;
+    width: auto;
+  }
+
+.nb-b1{
+  margin-right: 15px;
+
+}
+
+.slideArea{
+  margin-top:6%;
+}
+
+.jumbotron{
+  height: 700px;
+  width: 100%;
+  padding: 1%;
+}
+
+.mySlides{
+  height: 550px;
+  width: 100%;
+  border: 2px solid green;
+  opacity: 0.85;
+}
+
+  .display-6{
+    color: lightcyan;
+  }
+  
   .col-s1,
   .col-s3 {
-    height: 300px;
-    background-color: green;
+    min-height: 300px;
+    height: fit-content;
+    background-color: rgb(76, 185, 76);
+    margin-bottom: 4%;
+    padding-bottom: 1%;
+    padding-top: 0.5%;
   }
 
   .col-s2 {
-    height: 300px;
-    background-color: green;
+    min-height: 300px;
+    height: fit-content;
+    background-color: rgb(76, 185, 76);
+    margin-bottom: 4%;
+    padding-bottom: 1%;
+    padding-top: 0.5%;
   }
 
   .col-s1,
   .col-s2,
   .col-s3 {
-    margin-left: 4.17%;
+    margin-left: 11.22%;
+  }
+
+  .btn-lm:hover,
+  .col-s1:hover,
+  .col-s2:hover,
+  .col-s3:hover {
+  transform: scale(1.1);
+  }
+
+  .col-s7,
+  .col-s10,
+  .col-s11 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5.67%;
+    height: 700px;
+    background-color: rgb(76, 185, 76);
+    padding: 2%;
   }
 
   .col-s4,
-  .col-s5 {
-    margin-top: 2%;
+  .col-s5,
+  .col-s8,
+  .col-s9{
+    margin-top:6%;
+    margin-bottom: 2%;
     margin-left: 5.67%;
     height: 700px;
-    background-color: green;
-    padding-right: 30px;
+    background-color: rgb(76, 185, 76);
+    padding: 2%;
+  }
+  .col-s6{
+    min-height: 700px;
+    height:fit-content;
+    margin-top: 2%;
+    margin-bottom: 100px;
+    margin-left: 5.67%;
+    background-color: rgb(76, 185, 76);
+    padding: 2%;
   }
 
+  .col-s12{
+    height:fit-content;
+    padding-left: 0%;
+    margin-left: 0%;
+  }
+  
+  .row{
+    margin-bottom: 1rem;
+  }
+
+  .display-3{
+  margin-left: 2rem;
+  }
+
+  .fs-f1{
+    margin:2%;
+  }
+
+  .foodsearch{
+    margin:2%;
+    height: 50px;
+    width:100%;
+  }
+   
+  .foodsearchtext{
+    width: 60%;
+  }
+  
+  .foodsearchbutton{
+    margin-left: 10%;
+  }
+  
+  .foodfilter{
+    margin:2%;
+    height: 200px;
+  }
+
+  .foodfiltertip{
+    margin:2%;
+    height: 16rem;
+  }
+
+  .searchList{
+    border:2px solid blue;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-right: 20px;
+    padding:1rem;
+  }
+
+  .dropdown-menu{
+    position: absolute; 
+    will-change: transform; 
+    top: 0px; left: 0px; 
+    transform: translate3d(0px, 38px, 0px);
+  }
+
+  .bg1,
+  .bg2{
+    margin-right: 20px;
+  }
+  
   .foot {
     text-align: center;
     height: 75px;
-    background-color: rgb(76, 185, 76)
+    background-color: white;
+    opacity: 0.95;
   }
 </style>
 
