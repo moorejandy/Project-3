@@ -2,7 +2,6 @@ import React, { Component } from "react";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // import API from "../../utils/API";
-import API from "../../utils/API";
 import {Nav3} from "../../components/Nav";
 import Recipe from "../../components/Recipe";
 import Footer from "../../components/Footer";
@@ -12,7 +11,7 @@ const axios = require("axios");
 class UserPage extends Component {
   state = {
     recipes: [],
-    q: "",
+    q: ""
   };
 
   componentDidMount() {

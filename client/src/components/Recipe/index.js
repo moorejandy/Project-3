@@ -7,10 +7,10 @@ function Recipe({ recipes }) {
 
       {recipes.map(recipe => (
 
-        <li key={recipe.recipe.uri}> {recipe.recipe.uri} 
+        <div key={recipe.recipe.uri}> {recipe.recipe.uri} 
         {recipe.recipe.label} 
-        {recipe.recipe.image} 
-        {recipe.recipe.ingredientLines}</li>
+        <img src = {recipe.recipe.image}/> 
+        {recipe.recipe.ingredientLines}</div>
       ))}
     </ul>
   );
