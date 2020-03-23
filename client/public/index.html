@@ -12,15 +12,15 @@
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-  integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+   integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/materia/bootstrap.min.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+ 
   <title>Thrive</title>
-
-  
 </head>
 
 <body>
@@ -56,9 +56,38 @@
 
   .navbar-brand {
     height: 4rem;
-    width: 30px;
+    width: 150px;
   }
 
+  .navbar-nav {
+    margin-left: 5%;
+  }
+
+  .nav-li1,
+  .nav-li4 {
+    font-size: 20px;
+    width: 150px;
+    text-align: center;
+    padding-bottom: 0%;
+    color: rgb(76, 185, 76);
+    border-bottom: 10px solid rgb(76, 185, 76);
+  }
+
+  .nav-li2,
+  .nav-li3 {
+    font-size: 20px;
+    width: 150px;
+    text-align: center;
+    color: rgb(76, 185, 76);
+  }
+
+  .nav-li1:hover,
+  .nav-li2:hover,
+  .nav-li3:hover,
+  .nav-li4:hover {
+  transform: scale(1.1);
+  }
+  
   .fixed-top{
     background-image: linear-gradient(white, white);
     opacity: 0.95;
@@ -69,32 +98,41 @@
     width: auto;
   }
 
-.nb-b1{
+  .nb-b1{
   margin-right: 15px;
 
-}
+  }
 
-.slideArea{
+  .slideArea{
   margin-top:6%;
-}
+  }
 
-.jumbotron{
+  .jumbotron{
   height: 700px;
   width: 100%;
   padding: 1%;
-}
+  }
 
-.mySlides{
+  .mySlides{
   height: 550px;
   width: 100%;
-  border: 2px solid green;
   opacity: 0.85;
-}
+  }
 
   .display-6{
     color: lightcyan;
   }
   
+  .headLine{
+    height: 1px;
+    background-color: whitesmoke;
+  }
+
+  .my-10{
+    height: 1px;
+    background-color: rgb(35, 199, 35);
+  }
+
   .col-s1,
   .col-s3 {
     min-height: 300px;
@@ -149,6 +187,7 @@
     background-color: rgb(76, 185, 76);
     padding: 2%;
   }
+
   .col-s6{
     min-height: 700px;
     height:fit-content;
@@ -169,8 +208,35 @@
     margin-bottom: 1rem;
   }
 
+  .loginDiv{
+    width: 100%;
+    height: fit-content;
+    padding: 4%;
+    background-color: whitesmoke;
+  }
+
+  .infoDiv{
+    width: 100%;
+    height: 100%;
+    padding: 2.5%;
+    background-color: whitesmoke;
+  }
+
+  .signupDiv{
+    width: 100%;
+    height: fit-content;
+    padding: 4%;
+    background-color: whitesmoke;
+  }
+
   .display-3{
   margin-left: 2rem;
+  }
+
+
+ .loginLine{
+  background-color:  rgb(76, 185, 76);
+  height: 2px;
   }
 
   .fs-f1{

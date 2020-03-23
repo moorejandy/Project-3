@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-
 import { Nav4 } from "../../components/Nav";
-import Recipe from "../../components/Recipe";
 import { Container, Col, Row } from "../../components/Grid";
 import Footer from "../../components/Footer";
 const axios = require("axios");
@@ -50,9 +48,6 @@ class SavedRecipePage extends Component {
 
 
     render() {
-
-        const { recipes } = this.state;
-
         return (
             <div>
                 <Nav4 />
@@ -63,12 +58,12 @@ class SavedRecipePage extends Component {
                                 <h1 class="display-1">Information</h1>
                             </Row>
                             <Row>
-                                
+                        
                             </Row>
                         </Col>
                         <Col size="md-4 s11">
                             <div class="nutritionFact">
-
+                               <h3>Nutrition</h3> 
                             </div>
                         </Col>
                     </Row>
