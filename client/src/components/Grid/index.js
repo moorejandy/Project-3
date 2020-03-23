@@ -4,12 +4,12 @@ import React from "react";
 
 // This Container component allows us to use a bootstrap container without worrying about class names
 export function Container({children }) {
-  return <div className="container-fluid border border-success">{children}</div>;
+  return <div className="container-fluid ">{children}</div>;
 }
 
 // This Row component lets us use a bootstrap row without having to think about class names
 export function Row({children }) {
-  return <div className="row border border-danger">{children}</div>;
+  return <div className="row ">{children}</div>;
 }
 
 // This Col component lets us size bootstrap columns with less syntax

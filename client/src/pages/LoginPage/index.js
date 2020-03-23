@@ -45,36 +45,39 @@ class UserForm extends Component {
         <Container>
           <Row>
             <Col size="md-6 s8">
-              <h1 class="display-1">Information</h1>
+              <div class="infoDiv">
+                <h1 class="display-4">Information</h1>
+                <hr class="loginLine" />
+              </div>
             </Col>
             <Col size="md-4 s9">
-              <h1 class="display-1">Login Form </h1>
-              
-
-
-              <form>
-                <div class="form-group">
-                  <label for="formGroupExampleInput">Example label</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input"
-                    name="userName"
-                    value={this.state.userName}
-                    onChange={this.handleInputChange}
-                    placeholder="Enter user name"
-                    required></input>   
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.handleInputChange}
-                    placeholder="Enter a password"
-                    required></input>
-                </div>
-                <button class="btn btn-primary" disabled={!(this.state.userName && this.state.password)}
-                  onClick={this.handleFormSubmit}
-                >Login</button>
-              </form>
+              <div class="loginDiv">
+                <h1 class="display-4">Login Form </h1>
+                <hr class="loginLine" />
+                <form>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Example label</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input"
+                      name="userName"
+                      value={this.state.userName}
+                      onChange={this.handleInputChange}
+                      placeholder="Enter user name"
+                      required></input>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                      name="password"
+                      value={this.state.password}
+                      onChange={this.handleInputChange}
+                      placeholder="Enter a password"
+                      required></input>
+                  </div>
+                  <button class="btn btn-primary" disabled={!(this.state.userName && this.state.password)}
+                    onClick={this.handleFormSubmit}
+                  >Login</button>
+                </form>
+              </div>
             </Col>
           </Row>
         </Container>

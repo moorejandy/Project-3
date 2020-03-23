@@ -25,18 +25,16 @@ function HomePage() {
         <Container>
           <Row>
             <Col size="md-4 s1">
-              <h3 class="display-6">Video of the day</h3> <hr/>
-              <video width="100%" height="100%" controls>
-                <source src="movie.mp4" type="video/mp4"></source>
-                <source src="movie.ogg" type="video/ogg"></source>
-              </video>
+              <h3 class="display-6"><i class="fas fa-concierge-bell"></i>  Video of the day</h3> <hr class="headLine"/>
+              <iframe class="youtubeFrame" width="100%" height="300px"src="https://www.youtube.com/embed/AEUBQ7Ieub0"
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+              </iframe>
             </Col>
             <Col size="md-4 s2">
-              <h3 class="display-6">Recipe</h3> <hr/>
-              <video width="100%" height="100%" controls>
-                <source src="movie.mp4" type="video/mp4"></source>
-                <source src="movie.ogg" type="video/ogg"></source>
-              </video>
+              <h3 class="display-6"><i class="fas fa-utensils"></i>  Recipe</h3> <hr class="headLine"/>
+              <iframe class="youtubeFrame" width="100%" height="300px"  src="https://www.youtube.com/embed/GDS1OVF46UY"  
+              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+              </iframe>
             </Col>
           </Row>
         </Container>

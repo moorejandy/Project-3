@@ -37,17 +37,14 @@ export function Nav3() {
       <a class="navbar-brand" href="/">
         <img class="appLogo" src="thrive1.PNG">
         </img></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
+      
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active border border-success border-bottom-0  rounded">
-            <a class="nav-link" href="/user">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link nav-li1" href="/user">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/user/id">Link</a>
+          <li class="nav-item active border border-success border-bottom-0  rounded">
+            <a class="nav-link  nav-li2" href="/userid">Link</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -62,19 +59,20 @@ export function Nav3() {
 
 export function Nav4() {
   return (
-    <nav class="navbar navbar-expand-lg bg-light border border-succes">
-      <a class="navbar-brand" href="/">Thrive</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg bg-light border border-success">
+      <a class="navbar-brand" href="/">
+        <img class="appLogo" alt="Thrive" src="thrive2.PNG">
+        </img></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/user">Home <span class="sr-only">(current)</span></a>
+          <li class="nav-item active border border-success border-bottom-0  rounded">
+            <a class="nav-link nav-li3" href="/user">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active border border-success border-bottom-0  rounded">
-            <a class="nav-link" href="/user/id">Link</a>
+            <a class="nav-link nav-li4" href="/userid">Link</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

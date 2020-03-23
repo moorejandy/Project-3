@@ -54,13 +54,15 @@ class UserForm extends Component {
         <Container>
           <Row>
             <Col size="md-6 s4">
-              <h1 class="display-1">Information</h1>
+            <div class="infoDiv">
+                <h1 class="display-4">Information</h1>
+                <hr class="loginLine" />
+              </div>
             </Col>
             <Col size="md-4 s5">
-              <h1 class="display-1">SignUp Form </h1>
-              
-
-
+            <div class="signupDiv">
+              <h1 class="display-1">Signup </h1>
+              <hr class="loginLine" />
               <form>
                 <div class="form-group">
                   <label for="formGroupExampleInput">Example label</label>
@@ -94,6 +96,7 @@ class UserForm extends Component {
                   onClick={this.handleFormSubmit}
                 >Sign Up</button>
               </form>
+              </div>
             </Col>
           </Row>
         </Container>

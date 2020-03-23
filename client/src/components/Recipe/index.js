@@ -16,7 +16,7 @@ function Recipe({ recipes }) {
         <h5>Preparation <i class="fas fa-hourglass-half"></i> : {recipe.recipe.totalTime} min</h5>
         <h5>Calories: {recipe.recipe.calories}</h5>
         <hr class="searchLine"/>
-        <button class="saveButton btn-danger">Save</button></div>
+        <button class="saveButton btn-danger btn-lg">Save</button></div>
       ))}
     </ul>
   );
