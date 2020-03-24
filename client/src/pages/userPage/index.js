@@ -1,22 +1,19 @@
 import React, { Component } from "react";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
-// import API from "../../utils/API";
 import { Nav3 } from "../../components/Nav";
 import Recipe from "../../components/Recipe";
 import { Container, Col, Row } from "../../components/Grid";
 import Footer from "../../components/Footer";
 const axios = require("axios");
 
-
 class UserPage extends Component {
   state = {
     recipes: [],
-    q: ""
+    q: "",
+    q2: "",
+    q3: ""
   };
 
   componentDidMount() {
-
   }
 
   handleInputChange = event => {
@@ -27,15 +24,12 @@ class UserPage extends Component {
   };
 
   getRecipes = () => {
-    // console.log("clicked the button");
-    axios
-      .get("https://api.edamam.com/search?q=" + this.state.q + "&app_id=299349fb&app_key=1271d24b2a30960d770f228fa7a35422")
-      // .then(results => console.log(results))
+     axios
+      .get("https://api.edamam.com/search?q=" + this.state.q + "&app_id=299349fb&app_key=1271d24b2a30960d770f228fa7a35422" + "&health=" + this.state.q2 + "&diet=" + this.state.q3)
       .then(results => {
         results.data.hits.forEach(element => {
           console.log(element.recipe.label);
         });
-        // console.log(results.data.hits);
         JSON.stringify([results.data.hits]);
         this.setState({
           recipes: results.data.hits
@@ -44,31 +38,73 @@ class UserPage extends Component {
       });
   }
 
-  //   getRecipes2 = () =>{
-  //     axios 
-  //     .get("https://api.edamam.com/search?q=chicken&app_id=299349fb&app_key=1271d24b2a30960d770f228fa7a35422")
-
-  //     .then(response =>
-  //       response.results.data[0].hits.map(recipe => ({
-  // recipe: `${recipe.label} ${recipe.image}`
-  //       }))
-  //       )
-  //       .then(recipes => {
-  //         this.setState({
-  //           recipes,
-  //           isLoading: false
-  //         });
-  //       }).catch(error => this.setState({ error, isLoading: false}))
-  //   }
-
   handleFormSubmit = event => {
     event.preventDefault();
     this.getRecipes();
+    console.log("the value of health is " + this.state.q3);
   };
 
+  filtervalue11 = event => {
+    event.preventDefault();
+    this.state.q2 = "vegan";
+  };
 
-  render() {
+  filtervalue12 = event => {
+    event.preventDefault();
+    this.state.q2 = "vegetarian";
+  };
 
+  filtervalue13 = event => {
+    event.preventDefault();
+    this.state.q2 = "peanut-free";
+  };
+
+  filtervalue14 = event => {
+    event.preventDefault();
+    this.state.q2 = "sugar-conscious";
+  };
+
+  filtervalue15 = event => {
+    event.preventDefault();
+    this.state.q2 = "soy-free";
+  };
+
+  filtervalue16 = event => {
+    event.preventDefault();
+    this.state.q2 = "dairy-free";
+  };
+
+  filtervalue21 = event => {
+    event.preventDefault();
+    this.state.q3 = "balanced";
+  };
+
+  filtervalue22 = event => {
+    event.preventDefault();
+    this.state.q3 = "high-fiber";
+  };
+
+  filtervalue23 = event => {
+    event.preventDefault();
+    this.state.q3 = "high-protein";
+  };
+
+  filtervalue24 = event => {
+    event.preventDefault();
+    this.state.q3 = "	low-carb";
+  };
+
+  filtervalue25 = event => {
+    event.preventDefault();
+    this.state.q3 = "low-fat";
+  };
+
+  filtervalue26 = event => {
+    event.preventDefault();
+    this.state.q3 = "low-sodium";
+  };
+
+ render() {
     const { recipes } = this.state;
 
     return (
@@ -113,26 +149,28 @@ class UserPage extends Component {
                     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Type
                     </button>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item di-11" href="#">Vegan</a>
-                      <a class="dropdown-item di-12" href="#">Keto</a>
-                      <a class="dropdown-item di-13" href="#">Vegetarian</a>
-                      <a class="dropdown-item di-14" href="#">Non-vegetarian</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item di-19" href="#">No Filter</a>
-                    </div>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item di-11" onClick={this.filtervalue11}>Vegan</li>
+                      <li class="dropdown-item di-12" onClick={this.filtervalue12}>Vegetarian</li>
+                      <li class="dropdown-item di-13" onClick={this.filtervalue13}>Peanut-Free</li>
+                      <li class="dropdown-item di-14" onClick={this.filtervalue14}>Sugar-Conscious</li>
+                      <li class="dropdown-item di-15" onClick={this.filtervalue15}>Soy-Free</li>
+                      <li class="dropdown-item di-16" onClick={this.filtervalue16}>Diary-Free</li>
+                    </ul>
                   </div>
+                  
                   <div class="btn-group bg2">
                     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Calories
                     </button>
-                    <div class="dropdown-menu di-21">
-                      <a class="dropdown-item di-22" href="#"> less than 500 cal </a>
-                      <a class="dropdown-item di-23" href="#"> less than 1 Kcal</a>
-                      <a class="dropdown-item di-24" href="#">less than 2 Kcal</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item di-29" href="#">No Filter</a>
-                    </div>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item di-21" onClick={this.filtervalue21}>Balanced</li>
+                      <li class="dropdown-item di-22" onClick={this.filtervalue22}>High-Fiber</li>
+                      <li class="dropdown-item di-23" onClick={this.filtervalue23}>High-Protien</li>
+                      <li class="dropdown-item di-24" onClick={this.filtervalue24}>Low-Carb</li>
+                      <li class="dropdown-item di-25" onClick={this.filtervalue25}>Low-Fat</li>
+                      <li class="dropdown-item di-26" onClick={this.filtervalue26}>Low-Sodium</li>
+                    </ul>
                   </div>
                 </div>
               </Row>
