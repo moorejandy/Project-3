@@ -15,6 +15,14 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
+  findByUserCred: function(req, res) {
+    db.Users
+      .find({userName: req.params.userName})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
   create: function(req, res) {
     db.Users
       .create(req.body)
