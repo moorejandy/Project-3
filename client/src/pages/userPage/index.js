@@ -3,6 +3,7 @@ import { Nav3 } from "../../components/Nav";
 import Recipe from "../../components/Recipe";
 import { Container, Col, Row } from "../../components/Grid";
 import Footer from "../../components/Footer";
+import API from "../../utils/API";
 const axios = require("axios");
 
 class UserPage extends Component {
@@ -44,6 +45,22 @@ class UserPage extends Component {
     this.getRecipes();
     console.log("the value of health is " + this.state.q3);
   };
+
+    handleSaveSubmit = event => {
+    event.preventDefault();
+    if (this.state.sessionStorage) {
+      API.saveUser({
+        recipe: this.state.recipes
+      })
+//  return "saveRecipe"
+        // .then(res => this.redirect("./login"))
+        .catch(err => console.log(err.response));
+    }
+    console.log(this.recipe);
+
+  exports.handleSaveSubmit=this.handleSaveSubmit;
+  };
+
 
   filtervalue11 = event => {
     event.preventDefault();

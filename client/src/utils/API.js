@@ -32,7 +32,7 @@ export default {
     return axios.delete("/api/recipes/" + id);
   },
   // Saves a recipe to the database
-  saveRecipes: function(recipeData) {
-    return axios.post("/api/recipes", recipeData);
+  saveRecipes: function(id) {
+    return axios.put("/api/user/:id", id);
   }
 };
