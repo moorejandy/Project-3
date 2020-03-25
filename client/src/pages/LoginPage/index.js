@@ -7,15 +7,12 @@ import Footer from "../../components/Footer";
 class UserForm extends Component {
   state = {
     userName: "",
-    password: "",
-    email: ""
-
+    password: ""
   };
 
   componentDidMount() {
 
   }
-
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -26,16 +23,20 @@ class UserForm extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.userName && this.state.password) {
-      API.saveUser({
-        userName: this.state.userName,
-        password: this.state.password,
-        email: this.state.email
+    if (this.state.userName) {
+      API.getUserId({
+        userName: this.state.userName
+        // password: this.state.password
+      }).then(results => {
+        console.log(results);
+        sessionStorage.setItem('userId', results.data[0]._id);
+
       })
-        .then(res => this.redirect("./user"))
         .catch(err => console.log(err.response));
-    }
+    };
+
     this.props.history.push('/user');
+    // console.log(this.state.userName + "-----" + this.state.password);
   };
   // function UserForm(){
   render() {
@@ -56,7 +57,7 @@ class UserForm extends Component {
                 <hr class="loginLine" />
                 <form>
                   <div class="form-group">
-                    <label for="formGroupExampleInput">Example label</label>
+                    <label for="formGroupExampleInput">User Name</label>
                     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input"
                       name="userName"
                       value={this.state.userName}

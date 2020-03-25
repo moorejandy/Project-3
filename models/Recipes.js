@@ -13,10 +13,21 @@ var RecipesSchema = new Schema({
     type: String,
     required: true
   },
-  ingredients: {
+  yield: {
+  type: String,
+  },
+  ingredientLines: {
       type: [],
       required: true
   },
+  totalTime: {
+    type: [],
+    required: true
+},
+  calories: {
+  type: [],
+  required: true
+},
   note: [{
     type: Schema.Types.ObjectId,
     ref: "Note"

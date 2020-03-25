@@ -1,6 +1,8 @@
 import React from "react";
 
-function Recipe({ recipes }) {
+function Recipe({ recipes}) {
+
+
   console.log("recipe component: " + JSON.stringify(recipes[0]));
   return (
     <ul>
@@ -15,8 +17,10 @@ function Recipe({ recipes }) {
         <h5>Ingredients: {recipe.recipe.ingredientLines} </h5>
         <h5>Preparation <i class="fas fa-hourglass-half"></i> : {recipe.recipe.totalTime} min</h5>
         <h5>Calories: {recipe.recipe.calories}</h5>
+        <h5>Link to recipe: {recipe.recipe.url}</h5>
         <hr class="searchLine"/>
-        <button class="saveButton btn-danger btn-lg">Save</button></div>
+        <button class="saveButton btn-danger btn-lg" 
+        >Save</button></div>
       ))}
     </ul>
   );

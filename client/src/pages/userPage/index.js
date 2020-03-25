@@ -3,10 +3,12 @@ import { Nav3 } from "../../components/Nav";
 import Recipe from "../../components/Recipe";
 import { Container, Col, Row } from "../../components/Grid";
 import Footer from "../../components/Footer";
+import API from "../../utils/API";
 const axios = require("axios");
 
 class UserPage extends Component {
   state = {
+    userId: sessionStorage.getItem("userId"),
     recipes: [],
     q: "",
     q2: "",
@@ -25,7 +27,7 @@ class UserPage extends Component {
 
   getRecipes = () => {
      axios
-      .get("https://api.edamam.com/search?q=" + this.state.q + "&app_id=299349fb&app_key=1271d24b2a30960d770f228fa7a35422" + "&health=" + this.state.q2 + "&diet=" + this.state.q3)
+      .get("https://api.edamam.com/search?q=" + this.state.q + "&app_id=299349fb&app_key=1271d24b2a30960d770f228fa7a35422" + this.state.q2 + this.state.q3)
       .then(results => {
         results.data.hits.forEach(element => {
           console.log(element.recipe.label);
@@ -44,64 +46,80 @@ class UserPage extends Component {
     console.log("the value of health is " + this.state.q3);
   };
 
+    handleSaveSubmit = event => {
+    event.preventDefault();
+    if (this.state.sessionStorage) {
+      API.saveUser({
+        recipe: this.state.recipes
+      })
+//  return "saveRecipe"
+        // .then(res => this.redirect("./login"))
+        .catch(err => console.log(err.response));
+    }
+    console.log(this.recipe);
+
+  exports.handleSaveSubmit=this.handleSaveSubmit;
+  };
+
+
   filtervalue11 = event => {
     event.preventDefault();
-    this.state.q2 = "vegan";
+    this.state.q2 = "&health=vegan";
   };
 
   filtervalue12 = event => {
     event.preventDefault();
-    this.state.q2 = "vegetarian";
+    this.state.q2 = "&health=vegetarian";
   };
 
   filtervalue13 = event => {
     event.preventDefault();
-    this.state.q2 = "peanut-free";
+    this.state.q2 = "&health=peanut-free";
   };
 
   filtervalue14 = event => {
     event.preventDefault();
-    this.state.q2 = "sugar-conscious";
+    this.state.q2 = "&health=sugar-conscious";
   };
 
   filtervalue15 = event => {
     event.preventDefault();
-    this.state.q2 = "soy-free";
+    this.state.q2 = "&health=soy-free";
   };
 
   filtervalue16 = event => {
     event.preventDefault();
-    this.state.q2 = "dairy-free";
+    this.state.q2 = "&health=dairy-free";
   };
 
   filtervalue21 = event => {
     event.preventDefault();
-    this.state.q3 = "balanced";
+    this.state.q3 = "&diet=balanced";
   };
 
   filtervalue22 = event => {
     event.preventDefault();
-    this.state.q3 = "high-fiber";
+    this.state.q3 = "&diet=high-fiber";
   };
 
   filtervalue23 = event => {
     event.preventDefault();
-    this.state.q3 = "high-protein";
+    this.state.q3 = "&diet=high-protein";
   };
 
   filtervalue24 = event => {
     event.preventDefault();
-    this.state.q3 = "	low-carb";
+    this.state.q3 = "&diet=low-carb";
   };
 
   filtervalue25 = event => {
     event.preventDefault();
-    this.state.q3 = "low-fat";
+    this.state.q3 = "&diet=low-fat";
   };
 
   filtervalue26 = event => {
     event.preventDefault();
-    this.state.q3 = "low-sodium";
+    this.state.q3 = "&diet=low-sodium";
   };
 
  render() {

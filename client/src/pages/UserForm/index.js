@@ -35,7 +35,7 @@ class UserForm extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.userName && this.state.password && this.state.email) {
+    if (this.state.userName && this.state.password) {
       API.saveUser({
         userName: this.state.userName,
         password: this.state.password,
@@ -65,8 +65,8 @@ class UserForm extends Component {
               <hr class="loginLine" />
               <form>
                 <div class="form-group">
-                  <label for="formGroupExampleInput">Example label</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input"
+                  <label for="formGroupExampleInput">User Name</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Create a user name"
                     name="userName"
                     value={this.state.userName}
                     onChange={this.handleInputChange}
