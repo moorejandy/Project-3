@@ -3,7 +3,7 @@ THRIVE
 
 The Idea:
 - Create an app that allow users to search and filter recipes and save their preferred recipes.
-- With their account, a user can retrieve all the saved recipes in order use whenever needed.
+- With their account,a user can retrieve all the saved recipes in order use whenever needed.
 
 User Guide:
 
