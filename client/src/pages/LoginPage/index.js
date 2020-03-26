@@ -29,7 +29,7 @@ class UserForm extends Component {
         // password: this.state.password
       }).then(results => {
         console.log(results);
-        sessionStorage.setItem('userId', results.data[0]._id);
+        window.sessionStorage.setItem('userId', results.data[0]._id);
 
       })
         .catch(err => console.log(err.response));

@@ -8,7 +8,7 @@ const axios = require("axios");
 
 class UserPage extends Component {
   state = {
-    userId: sessionStorage.getItem("userId"),
+    _id: window.sessionStorage.getItem("userId"),
     recipes: [],
     q: "",
     q2: "",
@@ -16,7 +16,9 @@ class UserPage extends Component {
   };
 
   componentDidMount() {
+    console.log(this.userId);
   }
+
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -26,7 +28,7 @@ class UserPage extends Component {
   };
 
   getRecipes = () => {
-     axios
+    axios
       .get("https://api.edamam.com/search?q=" + this.state.q + "&app_id=299349fb&app_key=1271d24b2a30960d770f228fa7a35422" + this.state.q2 + this.state.q3)
       .then(results => {
         results.data.hits.forEach(element => {
@@ -46,20 +48,28 @@ class UserPage extends Component {
     console.log("the value of health is " + this.state.q3);
   };
 
-    handleSaveSubmit = event => {
+  handleSaveSubmit = event => {
+    
+    console.log(this.state._id);
+    console.log(this.state.recipes);
+    // if (this.state._id)
+    {
     event.preventDefault();
-    if (this.state.sessionStorage) {
-      API.saveUser({
-        recipe: this.state.recipes
-      })
-//  return "saveRecipe"
-        // .then(res => this.redirect("./login"))
-        .catch(err => console.log(err.response));
-    }
-    console.log(this.recipe);
-
-  exports.handleSaveSubmit=this.handleSaveSubmit;
-  };
+    API.saveRecipes(
+      { _id: this.state._id,
+      $set: {recipe: this.state.recipes}},
+      {new: true},
+      (err, data) => {
+        if (err) return (err, data);
+        return (null, data);
+      }
+    );
+    };
+  }
+      // .then(console.log(this._id))
+  //     .catch(err => console.log(err.response));
+  //   }
+  // };
 
 
   filtervalue11 = event => {
@@ -122,7 +132,7 @@ class UserPage extends Component {
     this.state.q3 = "&diet=low-sodium";
   };
 
- render() {
+  render() {
     const { recipes } = this.state;
 
     return (
@@ -136,7 +146,8 @@ class UserPage extends Component {
               </Row>
               <Row>
                 <Col size="md-12 border border-light s12">
-                  <Recipe recipes={recipes} />
+                  <Recipe recipes={recipes}
+                    handleSaveSubmit={this.handleSaveSubmit} />
                 </Col>
               </Row>
             </Col>
@@ -176,7 +187,7 @@ class UserPage extends Component {
                       <li class="dropdown-item di-16" onClick={this.filtervalue16}>Diary-Free</li>
                     </ul>
                   </div>
-                  
+
                   <div class="btn-group bg2">
                     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Calories
