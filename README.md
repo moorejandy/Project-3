@@ -7,15 +7,15 @@ With their account, a user can retrieve all the saved recipes in order use whene
 
 User Guide:
 
-<img src="/images/1_StartPage.PNG">
+![Screen Shot](images/1_StartPage)
 Front page gives option to SignUp and Login. Video of the Day and Random Recipe Video are available at the bottom.
-<img src="/images/2_Login_Page.PNG">
+![Screen Shot](images/2_Login_Page)
 Click on Login and enter credentials to enter into User page
-<img src="/images/3_Signup_Page.PNG">
+![Screen Shot](images/3_Signup_Page)
 Click on signup and enter credentials to create new acocount and direct to Login page
-<img src="/images/4_UserPage.PNG">
+![Screen Shot](images/4_UserPage)
 Search by typing keywird for food and uses filters for Health and Diet if needed and save recipes from the results
-<img src="/images/5_SavedUser_Recipe.PNG">
+![Screen Shot](images/5_SavedUser_Recipe)
 Click on 'My Recipes' to get list of all saved recipes associated with the user
 
 Built Utilizing:
