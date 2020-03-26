@@ -7,6 +7,7 @@ The Idea:
 
 User Guide:
 
+
 ![Screen Shot](images/1_Start_Page.png)
 - Front page gives option to SignUp and Login. Video of the Day and Random Recipe Video are available at the bottom.
 ![Screen Shot](images/2_Login_Page.png)
@@ -17,6 +18,7 @@ User Guide:
 - Search by typing keywird for food and uses filters for Health and Diet if needed and save recipes from the results
 ![Screen Shot](images/5_SavedUser_Recipe.png)
 - Click on 'My Recipes' to get list of all saved recipes associated with the user
+
 
 Built Utilizing:
 - HTML 

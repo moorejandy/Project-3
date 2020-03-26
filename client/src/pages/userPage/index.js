@@ -10,7 +10,7 @@ var dietFilter;
 
 class UserPage extends Component {
   state = {
-    userId: sessionStorage.getItem("userId"),
+    _id: window.sessionStorage.getItem("userId"),
     recipes: [],
     q: "",
     q2: "",
@@ -18,7 +18,9 @@ class UserPage extends Component {
   };
 
   componentDidMount() {
+    console.log(this.userId);
   }
+
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -49,19 +51,28 @@ class UserPage extends Component {
   };
 
   handleSaveSubmit = event => {
-    event.preventDefault();
-    if (this.state.sessionStorage) {
-      API.saveUser({
-        recipe: this.state.recipes
-      })
-        //  return "saveRecipe"
-        // .then(res => this.redirect("./login"))
-        .catch(err => console.log(err.response));
-    }
-    console.log(this.recipe);
 
-    exports.handleSaveSubmit = this.handleSaveSubmit;
-  };
+    
+    console.log(this.state._id);
+    console.log(this.state.recipes);
+    // if (this.state._id)
+    {
+    event.preventDefault();
+    API.saveRecipes(
+      { _id: this.state._id,
+      $set: {recipe: this.state.recipes}},
+      {new: true},
+      (err, data) => {
+        if (err) return (err, data);
+        return (null, data);
+      }
+    );
+    };
+  }
+      // .then(console.log(this._id))
+  //     .catch(err => console.log(err.response));
+  //   }
+  // };
 
 
   filtervalue11 = event => {
@@ -145,6 +156,7 @@ class UserPage extends Component {
         <Container>
           <Row>
             <Col size="md-6 s6">
+
               <div class="resultView">
                 <Row>
                   <h1 class="display-4 searchHead">  Search Results </h1>
@@ -152,10 +164,12 @@ class UserPage extends Component {
                 <hr class="searchLine" />
                 <Row>
                   <Col size="md-12 border border-light s12">
-                    <Recipe recipes={recipes} />
+                    <Recipe recipes={recipes}
+                      handleSaveSubmit={this.handleSaveSubmit} />
                   </Col>
                 </Row>
               </div>
+
             </Col>
             <Col size="md-4 s7">
               <div class="searchArea">
@@ -178,6 +192,9 @@ class UserPage extends Component {
                       Search
                </button>
                   </div>
+
+
+   
                 </Row>
                 <hr/>
                 <Row>
@@ -199,6 +216,7 @@ class UserPage extends Component {
                     <div class="btn-group bg2">
                       <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Diet
+
                     </button>
                       <ul class="dropdown-menu">
                         <li class="dropdown-item di-21" onClick={this.filtervalue21}>Balanced</li>

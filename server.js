@@ -1,4 +1,5 @@
 const express = require("express");
+// const path = require("path");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -17,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/projectThree");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://project3:project3@ds163757.mlab.com:63757/heroku_rb13qwjm");
 
 // Start the API server
 app.listen(PORT, function() {
