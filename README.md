@@ -1,38 +1,38 @@
 THRIVE
-The Complete Kitchen !   Version 1.0 Original Deployment Date: 3.25.2020
+- The Complete Kitchen !   Version 1.0 Original Deployment Date: 3.25.2020
 
 The Idea:
-Create an app that allow users to search and filter recipes and save their preferred recipes.
-With their account, a user can retrieve all the saved recipes in order use whenever needed.
+- Create an app that allow users to search and filter recipes and save their preferred recipes.
+- With their account, a user can retrieve all the saved recipes in order use whenever needed.
 
 User Guide:
 
-![Screen Shot](images/1_StartPage)
-Front page gives option to SignUp and Login. Video of the Day and Random Recipe Video are available at the bottom.
-![Screen Shot](images/2_Login_Page)
-Click on Login and enter credentials to enter into User page
-![Screen Shot](images/3_Signup_Page)
-Click on signup and enter credentials to create new acocount and direct to Login page
-![Screen Shot](images/4_UserPage)
-Search by typing keywird for food and uses filters for Health and Diet if needed and save recipes from the results
-![Screen Shot](images/5_SavedUser_Recipe)
-Click on 'My Recipes' to get list of all saved recipes associated with the user
+![Screen Shot](images/1_Start_Page.png)
+- Front page gives option to SignUp and Login. Video of the Day and Random Recipe Video are available at the bottom.
+![Screen Shot](images/2_Login_Page.png)
+- Click on Login and enter credentials to enter into User page
+![Screen Shot](images/3_Signup_Page.png)
+- Click on signup and enter credentials to create new acocount and direct to Login page
+![Screen Shot](images/4_UserPage.png)
+- Search by typing keywird for food and uses filters for Health and Diet if needed and save recipes from the results
+![Screen Shot](images/5_SavedUser_Recipe.png)
+- Click on 'My Recipes' to get list of all saved recipes associated with the user
 
 Built Utilizing:
-HTML
-Bootstrap CDN
-CSS
-Javascript/ jQuery
-Edamam API
-React
-Mongoose DB
-Font Awesome Icons
-MERN
+- HTML 
+- Bootstrap CDN
+- CSS
+- Javascript/ jQuery
+- Edamam API
+- React
+- Mongoose DB
+- Font Awesome Icons
+- MERN
 
 Original Contributors:
-Andy Moore
-Eric Pinder
-Zachariah Thomas
+- Andy Moore
+- Eric Pinder
+- Zachariah Thomas
 
 Thrive in Development:
 User Stories: 
@@ -47,7 +47,7 @@ User Stories:
 
 
 Future Development:
-Profile picture for users
-Login Credentials confirmation
-Calendar to set recipe preparation reminder
-Enhanced Front-End View
+- Profile picture for users
+- Login Credentials confirmation
+- Calendar to set recipe preparation reminder
+- Enhanced Front-End View
