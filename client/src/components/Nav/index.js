@@ -34,7 +34,7 @@ export function Nav2() {
 export function Nav3() {
   return (
     <nav class="navbar navbar-expand-lg bg-light border border-success">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="/user">
         <img class="appLogo" src="thrive1.PNG">
         </img></a>
       
@@ -44,7 +44,7 @@ export function Nav3() {
             <a class="nav-link nav-li1" href="/user">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active border border-success border-bottom-0  rounded">
-            <a class="nav-link  nav-li2" href="/userid">Link</a>
+            <a class="nav-link  nav-li2" href="/userid">My Recipes</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -60,7 +60,7 @@ export function Nav3() {
 export function Nav4() {
   return (
     <nav class="navbar navbar-expand-lg bg-light border border-success">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="/user">
         <img class="appLogo" alt="Thrive" src="thrive2.PNG">
         </img></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,7 +72,7 @@ export function Nav4() {
             <a class="nav-link nav-li3" href="/user">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active border border-success border-bottom-0  rounded">
-            <a class="nav-link nav-li4" href="/userid">Link</a>
+            <a class="nav-link nav-li4" href="/userid">My Recipes</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

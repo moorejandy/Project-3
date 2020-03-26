@@ -137,7 +137,7 @@
   .col-s3 {
     min-height: 300px;
     height: fit-content;
-    background-color: rgb(76, 185, 76);
+    background-color: rgba(76, 185, 76, 0.746);
     margin-bottom: 4%;
     padding-bottom: 1%;
     padding-top: 0.5%;
@@ -146,7 +146,8 @@
   .col-s2 {
     min-height: 300px;
     height: fit-content;
-    background-color: rgb(76, 185, 76);
+    color: white;
+    background-color: rgb(76, 185, 76, 0.746);
     margin-bottom: 4%;
     padding-bottom: 1%;
     padding-top: 0.5%;
@@ -172,7 +173,7 @@
     margin-bottom: 2%;
     margin-left: 5.67%;
     height: 700px;
-    background-color: rgb(76, 185, 76);
+    background-color: rgb(76, 185, 76, 0.746);
     padding: 2%;
   }
 
@@ -184,7 +185,7 @@
     margin-bottom: 2%;
     margin-left: 5.67%;
     height: 700px;
-    background-color: rgb(76, 185, 76);
+    background-color: rgb(76, 185, 76, 0.746);
     padding: 2%;
   }
 
@@ -194,7 +195,7 @@
     margin-top: 2%;
     margin-bottom: 100px;
     margin-left: 5.67%;
-    background-color: rgb(76, 185, 76);
+    background-color: rgb(76, 185, 76, 0.746);
     padding: 2%;
   }
 
@@ -222,6 +223,87 @@
     background-color: whitesmoke;
   }
 
+  .info-view{
+    border: 0.5px solid wheat;
+    height: 83%;
+    position: relative;
+    text-align: center;
+  }
+
+  .info-img{
+    width: 100%;
+    height: 100%;
+    filter: blur(4px);
+  -webkit-filter: blur(4px);
+    opacity: 0.3;
+  }
+
+  .fa-user{
+    position: absolute;
+    top: 5%;
+    left: 10%; 
+    zoom: 5;
+  }
+
+  .fa-search{
+    position: absolute;
+    top: 36%;
+    left: 10%; 
+    zoom: 5;
+  }
+  
+  .fa-save{
+    position: absolute;
+    top: 68%;
+    left: 10%; 
+    zoom: 5;
+  }
+       
+  .info-text1{
+    position: absolute;
+    top: 4%;
+    left: 25%;
+    text-align: left;
+  }
+
+  .info-text2{
+    position: absolute;
+    top: 13%;
+    left: 25%;
+    text-align: left;
+    margin-right: 10%;
+  }
+
+  .info-text3{
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    text-align: left;
+  }
+
+  .info-text4{
+    position: absolute;
+    top: 44%;
+    left: 25%;
+    text-align: left;
+    margin-right: 10%;
+  }
+
+  .info-text5{
+    position: absolute;
+    top: 68%;
+    left: 25%;
+    text-align: left;
+  }
+
+  .info-text6{
+    position: absolute;
+    top: 77%;
+    left: 25%;
+    text-align: left;
+    margin-right: 10%;
+  }
+
   .signupDiv{
     width: 100%;
     height: fit-content;
@@ -233,10 +315,42 @@
   margin-left: 2rem;
   }
 
-
- .loginLine{
+  .loginLine{
   background-color:  rgb(76, 185, 76);
   height: 2px;
+  }
+
+  .searchLine{
+  background-color:  rgb(76, 185, 76);
+  height: 2px;
+  margin-left: 3%;
+  }
+
+  .resultLine{
+  background-color:  rgb(76, 185, 76);
+  height: 1px;
+  }
+
+  .searchHead{
+  color:  black;
+  margin-left: 5%;
+  margin-top: 1%;
+  }
+
+  .searchArea{
+  width: 100%;
+  height: fit-content;
+  background-color: whitesmoke;  
+  margin: 1%;
+  padding-top: 3%;
+  padding-bottom: 30%;
+  padding-right: 3%;
+  padding-left: 3%;
+  }
+
+  .filter1-desc,
+  .filter2-desc{
+    font-style: italic;
   }
 
   .fs-f1{
@@ -244,7 +358,7 @@
   }
 
   .foodsearch{
-    margin:2%;
+    margin:4%;
     height: 50px;
     width:100%;
   }
@@ -258,21 +372,48 @@
   }
   
   .foodfilter{
-    margin:2%;
-    height: 200px;
+    margin:4%;
+    height: 20%;
   }
 
   .foodfiltertip{
-    margin:2%;
-    height: 16rem;
+    margin:4%;
+    height: 8rem;
+    width: 100%;
+    padding: 1%;
+  }
+
+  .dropdown-toggle{
+    margin-right: 2rem;
+    width:100px;
+  }
+
+  .resultView{
+  background-color: whitesmoke;
+  padding-top:1%;
+  padding-bottom:1%;
+  padding-right:3%;
+  margin-left: 1%;
+  min-height: 200px;
+  height: fit-content;
+  } 
+
+  .resultLabel{
+  font-style: italic;
   }
 
   .searchList{
-    border:2px solid blue;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    margin-right: 20px;
+    background-color: rgba(200, 226, 194, 0.931);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 10%;
     padding:1rem;
+    width:100%;
+  }
+
+  .cookingLink{
+    color:brown;
+    margin-right: 20%;
   }
 
   .dropdown-menu{
@@ -280,6 +421,24 @@
     will-change: transform; 
     top: 0px; left: 0px; 
     transform: translate3d(0px, 38px, 0px);
+  }
+
+  .dbSearchLine{
+    background-color: rgb(76, 185, 76);
+    height: 1px;
+  }
+
+  .dbRecipes{
+    background-color: whitesmoke;
+    min-height: 100px;
+    height: fit-content;
+    padding: 2%;
+  }
+
+  .nutritionFact{
+    background-color: whitesmoke;
+    height: 100%;
+    padding: 2%;
   }
 
   .bg1,
