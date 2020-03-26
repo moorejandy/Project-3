@@ -7,26 +7,26 @@ var RecipesSchema = new Schema({
   
   label: {
     type: String,
-    required: true
+    required: false
   },
   image: {
     type: String,
-    required: true
+    required: false
   },
   yield: {
   type: String,
   },
   ingredientLines: {
       type: [],
-      required: true
+      required: false
   },
   totalTime: {
     type: [],
-    required: true
+    required: false
 },
   calories: {
   type: [],
-  required: true
+  required: false
 },
   note: [{
     type: Schema.Types.ObjectId,

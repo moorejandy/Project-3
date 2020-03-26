@@ -1,12 +1,13 @@
 import React from "react";
 
-function Recipe({ recipes}) {
+
+function Recipe({recipes, handleSaveSubmit}) {
 
 
-  console.log("recipe component: " + JSON.stringify(recipes[0]));
+  // console.log("recipe component: " + JSON.stringify(recipes[0]));
   return (
-    <ul>
-
+    // <ul>
+<div>
       {recipes.map(recipe => (
         <div key={recipe.recipe.uri} class = "searchList"> 
         <h4 class="resultLabel">{recipe.recipe.label} </h4>
@@ -20,9 +21,10 @@ function Recipe({ recipes}) {
         <h5>Instructions: <a class="cookingLink" href={recipe.recipe.url}>{recipe.recipe.url}</a></h5>
         <hr class="resultLine"/>
         <button class="saveButton btn-danger btn-lg" 
-        >Save</button></div>
+        onClick={handleSaveSubmit}>Save</button>
+        </div>
       ))}
-    </ul>
+     </div>
   );
 }
 
