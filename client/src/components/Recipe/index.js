@@ -9,16 +9,16 @@ function Recipe({ recipes}) {
 
       {recipes.map(recipe => (
         <div key={recipe.recipe.uri} class = "searchList"> 
-        <h4>{recipe.recipe.label} </h4>
-        <hr class="searchLine"/>
+        <h4 class="resultLabel">{recipe.recipe.label} </h4>
+        <hr class="resultLine"/>
         <img src = {recipe.recipe.image}/>
-        <hr class="searchLine"/>
+        <hr class="resultLine"/>
         <h5>Yield: {recipe.recipe.yield}  <i class="fas fa-user-friends"></i></h5>  
         <h5>Ingredients: {recipe.recipe.ingredientLines} </h5>
         <h5>Preparation <i class="fas fa-hourglass-half"></i> : {recipe.recipe.totalTime} min</h5>
         <h5>Calories: {recipe.recipe.calories}</h5>
-        <h5>Link to recipe: {recipe.recipe.url}</h5>
-        <hr class="searchLine"/>
+        <h5>Instructions: <a class="cookingLink" href={recipe.recipe.url}>{recipe.recipe.url}</a></h5>
+        <hr class="resultLine"/>
         <button class="saveButton btn-danger btn-lg" 
         >Save</button></div>
       ))}

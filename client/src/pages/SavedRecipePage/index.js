@@ -54,16 +54,18 @@ class SavedRecipePage extends Component {
                 <Container>
                     <Row>
                         <Col size="md-6 s10">
-                            <Row>
-                                <h1 class="display-1">Information</h1>
-                            </Row>
-                            <Row>
-                        
-                            </Row>
+                            <div class="dbRecipes">
+                                <h1 class="display-4">Information</h1>
+                                <hr class="dbSearchLine" />
+                            </div>
+                            <div>
+
+                            </div>
                         </Col>
                         <Col size="md-4 s11">
                             <div class="nutritionFact">
-                               <h3>Nutrition</h3> 
+                               <h1 class="display-4">Nutrition</h1> 
+                               <hr class="dbSearchLine" />
                             </div>
                         </Col>
                     </Row>
