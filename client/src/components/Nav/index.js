@@ -6,7 +6,7 @@ export function Nav1() {
   return (
     <nav class="navbar border border-success fixed-top">
       <a class="navbar-brand" href="/">
-        <img class="appLogo" src="thrive1.PNG">
+        <img class="appLogo" src="thrive1.png">
         </img></a>
 
       <form class="form-inline my-2 my-lg-10">
@@ -25,7 +25,7 @@ export function Nav2() {
   return (
     <nav class="navbar border border-success fixed-top">
       <a class="navbar-brand" href="/">
-        <img class="appLogo" src="thrive1.PNG">
+        <img class="appLogo" src="thrive1.png">
         </img></a>
     </nav>
   );
@@ -35,7 +35,7 @@ export function Nav3() {
   return (
     <nav class="navbar navbar-expand-lg bg-light border border-success">
       <a class="navbar-brand" href="/user">
-        <img class="appLogo" src="thrive1.PNG">
+        <img class="appLogo" src="thrive1.png">
         </img></a>
       
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -61,7 +61,7 @@ export function Nav4() {
   return (
     <nav class="navbar navbar-expand-lg bg-light border border-success">
       <a class="navbar-brand" href="/user">
-        <img class="appLogo" alt="Thrive" src="thrive2.PNG">
+        <img class="appLogo" alt="Thrive" src="thrive2.png">
         </img></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
