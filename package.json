@@ -27,6 +27,7 @@
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
+    "node-gyp": "^6.1.0",
     "node-modules": "^1.0.1",
     "react": "^16.13.0",
     "react-bootstrap": "^1.0.0-beta.17",
