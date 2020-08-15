@@ -15,7 +15,7 @@ function HomePage() {
         <div class="slideArea">
           <Container>
             <Jumbotron>
-              <img class="mySlides" src="https://pairwise.com/wp-content/uploads/2018/10/bowls.jpg" ></img>
+              <img class="mySlides" src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" ></img>
               <hr class="my-10"></hr>
               <h4>Recipes for happy and healthy life <i class="fas fa-utensils"></i></h4>
               <a class="btn btn-success btn-lg btn-lm" href="/signup" role="button">Learn more</a>
