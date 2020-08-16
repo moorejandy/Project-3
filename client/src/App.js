@@ -5,7 +5,7 @@ import "./App.css";
 import HomePage from "./pages/HomePage";
 import UserForm from "./pages/UserForm";
 import LoginPage from "./pages/LoginPage";
-import UserPage from "./pages/userPage";
+import UserPage from "./pages/UserPage";
 import SavedRecipePage from "./pages/SavedRecipePage";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
