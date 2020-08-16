@@ -4,7 +4,7 @@ import Recipe from "../../components/Recipe";
 import { Container, Col, Row } from "../../components/Grid";
 import Footer from "../../components/Footer";
 import API from "../../utils/API";
-const axios = require("./node_modules/axios");
+const axios = require("../node_modules/axios");
 
 var healthFilter;
 var dietFilter;
