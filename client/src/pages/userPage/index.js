@@ -1,4 +1,4 @@
-import React, { Component } from "./node_modules/react";
+import React, { Component } from "../node_modules/react";
 import { Nav3 } from "../../components/Nav";
 import Recipe from "../../components/Recipe";
 import { Container, Col, Row } from "../../components/Grid";
